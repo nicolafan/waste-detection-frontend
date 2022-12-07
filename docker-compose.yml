@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+    web:
+        build: .
+        ports:
+            - "5173:5173"
+        depends_on:
+            - wastedetection
+    wastedetection:
+        image: wastedetection
+        ports:
+            - "8000:6006"
