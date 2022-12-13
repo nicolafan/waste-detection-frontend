@@ -1,12 +1,12 @@
 version: "3.9"
 services:
     wastedetectionfrontend:
-        build: .
+        image: rbarile17/wastedetectionfrontend
         ports:
             - "5173:5173"
         depends_on:
             - wastedetectionbackend
     wastedetectionbackend:
-        image: wastedetectionbackend
+        image: rbarile17/wastedetectionbackend
         ports:
             - "8000:8000"
