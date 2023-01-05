@@ -1,21 +1,21 @@
 version: "3.9"
 services:
     wastedetectionfrontend:
-        image: wastedetectionfrontend
+        image: rbarile17/wastedetectionfrontend
         container_name: wastedetectionfrontend
         ports:
             - "5173:5173"
         depends_on:
             - wastedetectionbackend
     prometheus:
-        image: prometheus
+        image: rbarile17/wastedetectionprometheus
         container_name: prometheus
         ports:
             - "9090:9090"
         depends_on:
             - wastedetectionbackend
     wastedetectionbackend:
+        image: rbarile17/wastedetectionbackend
         container_name: wastedetectionbackend
-        image: wastedetectionbackend
         ports:
             - "8000:8000"
