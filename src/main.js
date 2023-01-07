@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5173/api";
+axios.defaults.baseURL = "https://wastedetectionbackend-rbarile17.cloud.okteto.net";
 
 const app = createApp(App);
 
