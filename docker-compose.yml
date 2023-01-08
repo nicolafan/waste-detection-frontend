@@ -7,14 +7,14 @@ services:
             - "5173:5173"
         depends_on:
             - wastedetectionbackend
-    grafana:
+    wastedetectiongrafana:
         image: grafana/grafana
         container_name: wastedetectiongrafana
         ports:
             - "3000:3000"
         depends_on:
-            - prometheus
-    prometheus:
+            - wastedetectionprometheus
+    wastedetectionprometheus:
         image: rbarile17/wastedetectionprometheus
         container_name: wastedetectionprometheus
         ports:
